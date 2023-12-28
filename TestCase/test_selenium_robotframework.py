@@ -1,5 +1,9 @@
 # -*- coding:utf-8 -*-
+*** Settings ***
+Settings test demo
 
+*** Variable ***
+URL test demo
 
 *** Test Cases ***    
 Open Google and Search Nicktest
