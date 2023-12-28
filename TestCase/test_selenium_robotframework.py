@@ -3,15 +3,17 @@
 Settings test demo
 
 *** Variable ***
-URL test demo
+${MESSAGE}    Hello, world!
 
 *** Test Cases ***    
 Open Google and Search Nicktest
+    [Documentation]    Example test
+    Log    ${MESSAGE}
     show robot test
 
 *** Keywords ***    
 show robot test
-    Open Browser    https://www.google.com    chrome
+    Open Browser    google.com    Browser
     Input Text      name    # 找到搜尋框並輸入 "nicktest"
     Press Keys      name    # 模擬按下 Enter 鍵
     Close Browser
