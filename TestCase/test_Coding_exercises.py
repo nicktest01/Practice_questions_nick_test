@@ -145,3 +145,27 @@ Nick:由於題目沒有給資料表名稱,我假設資料表名稱叫做nicktest
 SELECT COUNT(DISTINCT department_id) FROM nicktest;          
 查詢結果為2 兩個不同的department_id
 排除NULL
+
+#第11題
+#設計一個 Function,依輸入金額、年收益率、累積月份,
+#以複利計算(本金含上月本利和),印出每月存款總額。本金最多 1000 萬,
+#計算請用完整精確小數點,印出請無條件進位取正整數。
+
+Nick:
+def compound_interest(principal, annual_rate, months):
+    if principal > 10_000_000:
+        raise ValueError("本金不得超過 1000 萬")
+    
+    monthly_rate = annual_rate / 12 / 100  # 轉換為月收益率
+    total_amount = principal    #total_amount = principal 這一行的作用是 初始化總金額，讓 total_amount 從 最初的本金 開始計算。
+    for month in range(1, months + 1):
+        total_amount *= (1 + monthly_rate)  # 計算當月複利
+        print(f"第 {month} 個月: {math.ceil(total_amount)}")  # 無條件進位取整數
+
+compound_interest(10000, 3, 12)  # 本金 1萬，年收益率 3%，計算 12 個月
+
+#本金檢查：若輸入金額超過 1000 萬，則拋出錯誤。
+#年收益率轉換：將年收益率轉換為月收益率（年收益率 / 12 / 100）。
+#複利計算：每個月利息累積到本金，再計算下個月利息。
+#無條件進位：使用 math.ceil() 確保輸出為整數且無條件進位。
+#替換 compound_interest(本金, 年收益率, 月數) 測試不同數據
