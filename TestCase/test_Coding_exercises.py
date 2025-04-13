@@ -13,15 +13,13 @@ def p(name, age):
 	    return
 	r = p(age = 50, name = ‘Ruby’)
        
-#這段 Python 代碼在 VS Code 上執行時可能會遇到語法錯誤，
-#主要是因為使用了錯誤的單引號（’ 和 ‘），這些是全形單引號，Python 需要標準的半形單引號 (') 或雙引號 (")。修正後的代碼如下：
+這段 Python 代碼在 VS Code 上執行時可能會遇到語法錯誤，
+主要是因為使用了錯誤的單引號（’ 和 ‘），這些是全形單引號，Python 需要標準的半形單引號 (') 或雙引號 (")。修正後的代碼如下：
 												  
 def p(name, age):
     print(f'姓名: {name}, 年齡: {age}')
     return
-
 r = p(age=50, name='Ruby')
-
 Nick :程式碼不能用’執行,姓名前與age後方需改為 ‘ 符號 才能執行 
 
 #第二題
@@ -70,15 +68,16 @@ sort(reverse=True) 會將列表按照降序排列，結果會變成 [20, 5, 0]
 #	(C)	lis.sort(reverse=True)
 #	(D)	lis.sort(reverse=False)
 #	(E)	無正確答案可選
+
 Nick:同上題解析,這邊選C
 
-題目
-employee_id   name    age   department_id
-1             Alice   25    1
-2             Bob     30    2
-3             Carol   NULL  NULL
-4             Dave    40    1
-5             Eve     22    2
+#題目
+#employee_id   name    age   department_id
+#1             Alice   25    1
+#2             Bob     30    2
+#3             Carol   NULL  NULL
+#4             Dave    40    1
+#5             Eve     22    2
 
 #(  B  ) 6. 請選擇查詢員工年齡時的正確描述
 #	SELECT COUNT(*), COUNT(age)
@@ -108,12 +107,11 @@ Nick:
 如果department_name有塞對應部門名稱
 則搜出來結果就會有對應顯示
 Name   department_name
-#Alice       NULL
-#Bob         NULL
-#Carol       NULL
-#Dave        NULL
-#Eve         NULL
-
+Alice       NULL
+Bob         NULL
+Carol       NULL
+Dave        NULL
+Eve         NULL
 
 #( B   ) 8. 請選擇篩選 age 排除 null 的正確語法
 #	(A) WHERE age != NULL
